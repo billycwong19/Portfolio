@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { Close } from '@styled-icons/evil/Close'
 import { MenuAlt3 } from '@styled-icons/heroicons-outline/MenuAlt3'
 import { Github } from '@styled-icons/boxicons-logos/Github'
+import { LightMode } from '@styled-icons/material-twotone/LightMode'
+import { Nightlight } from '@styled-icons/material-twotone/Nightlight'
 
 export const NavbarContainer = styled.div`
     width: 100%;
@@ -31,8 +33,15 @@ export const LightDarkContainer = styled.div`
     align-items: center;
 `
 
-export const Light = styled.div``
-export const Dark = styled.div``
+export const Light = styled(LightMode)`
+    height: 22px;
+    color: ${({ theme }) => theme.fontColor };
+`
+
+export const Dark = styled(Nightlight)`
+    height: 22px;
+    color: ${({ theme }) => theme.fontColor };
+`
 export const NavList = styled.div`
     width: 50%;
     list-style: none;

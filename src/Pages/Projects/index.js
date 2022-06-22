@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ProjectsBody, ProjectsBanner, ProjectsContainer } from "./Projects.style";
 import ProjectCard from './Components/ProjectCard'
 import projects from './data'

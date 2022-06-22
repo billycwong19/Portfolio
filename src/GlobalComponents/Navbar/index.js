@@ -35,7 +35,7 @@ export default function Navbar({ props }) {
 
             {/* onload checks current theme and is checked if theme is dark */}
             <LightDarkContainer>
-                <Light>Light</Light>
+                <Light />
             <ToggleButton toggle={ props.themeSwitcher } isChecked={isChecked} />
                 <Dark>Dark</Dark>
             </LightDarkContainer>

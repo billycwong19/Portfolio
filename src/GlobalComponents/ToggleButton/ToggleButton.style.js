@@ -6,6 +6,7 @@ export const ToggleContainer = styled.label`
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin: 0 .25em;
 
     input {
         opacity: 0;
