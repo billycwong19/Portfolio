@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const NavbarContainer = styled.div`
+    width: 100%;
     background-color: ${({ theme }) => theme.backgroundColor};
     display: flex;
     align-items: center;
@@ -11,12 +12,12 @@ export const NavbarContainer = styled.div`
 export const NavbarLeft = styled.div`
     display: flex;
     align-items: center;
-    margin-left: .5em;
 `
 
 export const NavLogo = styled.img`
     height: 44px;
     cursor: pointer;
+    margin-left: .5em;
 `
 export const NavList = styled.div`
     width: 50%;
@@ -71,7 +72,6 @@ export const DropDownNavListContainer = styled.div`
 
 export const Close = styled.div`
     text-align: right;
-    margin: 1em;
     color: ${({ theme }) => theme.fontColor };
     transition: .2s;
     i {
