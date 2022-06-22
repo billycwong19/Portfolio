@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { NavbarContainer, NavbarLeft, NavLogo, NavList, NavListItem, NavHamburger, DropDownNavList, DropDownNavListContainer, Close, CurrentPageHighlight } from "./Navbar.style";
-import ToggleButton from '../ToggleButton/ToggleButton'
+import ToggleButton from '../ToggleButton'
+import { MdClose } from 'react-icons/md'
 
 export default function Navbar({ props }) {
     const [menuDropDown, setMenuDropDown] = useState(false)
     const displayDropDown = (event) => menuDropDown === false ? setMenuDropDown(true) : setMenuDropDown(false);
+    const isChecked = () => props.theme === 'dark' ? `checked` : ``;
     
     return (
         <>
@@ -15,11 +17,7 @@ export default function Navbar({ props }) {
                 <NavLogo src="./logo192.png" alt="rounded logo" />
             </NavbarLeft>
             {/* onload checks current theme and is checked if theme is dark */}
-            { props.theme === 'light' ? 
-            <ToggleButton toggle={ props.themeSwitcher } />
-            :
-            <ToggleButton toggle={ props.themeSwitcher } checked />
-            }
+            <ToggleButton toggle={ props.themeSwitcher } isChecked={isChecked} />
 
             {/* displays only if screensize is larger than 414 */}
             <NavList>
@@ -49,10 +47,10 @@ export default function Navbar({ props }) {
         </NavbarContainer>
         
         {/* dropdown menu for mobile devices */}
-        { menuDropDown === true && 
-            <DropDownNavListContainer>
+        
+            <DropDownNavListContainer menuDropDown={menuDropDown} onClick={() => displayDropDown(false)}>
 
-                <Close onClick={() => displayDropDown(false)}>close</Close>
+                <Close onClick={() => displayDropDown(false)}><MdClose /></Close>
 
                 <DropDownNavList>
 
@@ -91,7 +89,7 @@ export default function Navbar({ props }) {
                 </DropDownNavList>
                 
             </DropDownNavListContainer>
-        }
+     
 
         </>
     )

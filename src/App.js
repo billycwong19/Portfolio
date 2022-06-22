@@ -3,9 +3,9 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./GlobalStyles/GlobalStyles.style";
 import { lightTheme, darkTheme } from './GlobalStyles/Themes.style'
 
-import Navbar from "./GlobalComponents/Navbar/Navbar";
-import Footer from "./GlobalComponents/Footer/Footer";
-import Projects from './Pages/Projects/Projects'
+import Navbar from "./GlobalComponents/Navbar/";
+import Footer from "./GlobalComponents/Footer";
+import Projects from './Pages/Projects/'
 import About from './Pages/About/About'
 
 const themeSetter = () => {

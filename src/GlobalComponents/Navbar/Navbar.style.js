@@ -34,15 +34,14 @@ export const NavList = styled.div`
 
 export const NavListItem = styled.li`
     color: ${({ theme }) => theme.fontColor };
-    border: 2px solid ${({ theme }) => theme.borderHighlightOpaque };
-    border-radius: 5px;
+    border-bottom: 2px solid ${({ theme }) => theme.borderHighlightOpaque };
     padding: 0.35em;
-    transition: .4s;
+    transition: .4s ease-in-out;
     -webkit-transition: .4s;
 
     &:hover {
         color: ${({ theme }) => theme.fontHover }; 
-        border: 2px solid ${({ theme }) => theme.borderHighlight };
+        border-bottom: 2px solid ${({ theme }) => theme.borderHighlight };
         cursor: pointer;
         padding: .5em;
     }
@@ -52,19 +51,22 @@ export const NavListItem = styled.li`
 export const CurrentPageHighlight = styled.li`
     list-style: none;
     color: ${({ theme }) => theme.activeFontColor};
-    border: 2px solid ${({ theme }) => theme.borderHighlight };
-    border-radius: 5px;
+    border-bottom: 2px solid ${({ theme }) => theme.borderHighlight };
     padding: .5em;
     cursor: pointer;
 
 `
 export const DropDownNavListContainer = styled.div`
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: ${({ theme }) => theme.backgroundColor} ;
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 1;
+    transition: 0.3s ease-in-out;
+    opacity: ${({ menuDropDown }) => (menuDropDown ? '1' : '0')};
+    top: ${({ menuDropDown }) => (menuDropDown ? '0' : '-100%')};
 `
 
 export const Close = styled.div`
@@ -72,7 +74,9 @@ export const Close = styled.div`
     margin: 1em;
     color: ${({ theme }) => theme.fontColor };
     transition: .2s;
-
+    i {
+        height: 44px;
+    }
     &:hover {
         color: ${({ theme }) => theme.fontHover }; 
         cursor: pointer;

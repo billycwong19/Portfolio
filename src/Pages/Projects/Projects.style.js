@@ -12,3 +12,11 @@ export const ProjectsBanner = styled.img`
     max-width: 100%;
     opacity: 0.9;
 `
+
+export const ProjectsContainer = styled.div`
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+`

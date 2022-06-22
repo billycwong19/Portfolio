@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const FooterContainer = styled.div`
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: -3em;
     width: 100%;
     background-color: ${({ theme }) => theme.backgroundColor };
     display: flex;
