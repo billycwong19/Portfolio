@@ -5,6 +5,7 @@ export const AboutBody = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5em;
 
     div {
         height: 100%;

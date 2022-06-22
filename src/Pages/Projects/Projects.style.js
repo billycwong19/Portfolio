@@ -6,6 +6,7 @@ export const ProjectsBody = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5em;
 `
 
 export const ProjectsBanner = styled.img`

@@ -30,7 +30,7 @@ export const ProjectCardHeader = styled.div`
 export const ProjectTitle = styled.div`
     font-weight: 600;
     margin-left: .5em;
-    border-bottom: 1px dotted ${({ theme }) => theme.fontColor };
+    border-bottom: 1px dotted ${({ theme }) => theme.borderHighlight };
 
     &:hover {
         color: ${({ theme }) => theme.fontHover };
@@ -54,8 +54,14 @@ export const ProjectDescription = styled.span`
     border-radius: 10px;
     position: absolute;
     z-index: 1;
-    margin-left: 2em;
+    margin-top: 2em;
+    left: 5em;
+
+    @media only screen and (min-width: 414px) {
+        left: initial;
+    }
 `
+
 export const ProjectIcon = styled.img`
     width: 44px;
     margin: 0 .5em;

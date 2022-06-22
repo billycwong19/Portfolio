@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { Close } from '@styled-icons/evil/Close'
+import { MenuAlt3 } from '@styled-icons/heroicons-outline/MenuAlt3'
+import { Github } from '@styled-icons/boxicons-logos/Github'
 
 export const NavbarContainer = styled.div`
     width: 100%;
@@ -7,6 +10,9 @@ export const NavbarContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     height: 4em;
+    position: fixed;
+    top: 0;
+    z-index: 1;
     
 `
 export const NavbarLeft = styled.div`
@@ -19,6 +25,14 @@ export const NavLogo = styled.img`
     cursor: pointer;
     margin-left: .5em;
 `
+
+export const LightDarkContainer = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+export const Light = styled.div``
+export const Dark = styled.div``
 export const NavList = styled.div`
     width: 50%;
     list-style: none;
@@ -64,26 +78,31 @@ export const DropDownNavListContainer = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
-    transition: 0.3s ease-in-out;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
     opacity: ${({ menuDropDown }) => (menuDropDown ? '1' : '0')};
     top: ${({ menuDropDown }) => (menuDropDown ? '0' : '-100%')};
 `
 
-export const Close = styled.div`
+export const CloseContainer = styled.div`
     text-align: right;
+    margin: .5em;
+`
+
+export const CloseIcon = styled(Close)`
     color: ${({ theme }) => theme.fontColor };
-    transition: .2s;
-    i {
-        height: 44px;
-    }
+    transition: .2s ease-in-out;
+    height: 44px;
+    
+
     &:hover {
         color: ${({ theme }) => theme.fontHover }; 
         cursor: pointer;
+        transform: rotate(180deg);
     }
+
 `
 export const DropDownNavList = styled(NavList)`
-    margin-top: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,8 +111,8 @@ export const DropDownNavList = styled(NavList)`
     height: 300px;
 
     img {
-        margin: .5em;
-        height: 44px;
+        margin-top: .3em;
+        height: 32px;
     }
     
 
@@ -101,13 +120,24 @@ export const DropDownNavList = styled(NavList)`
             display: none;
         }
 `
-export const NavHamburger = styled.div`
-    margin-right: .5em;
+export const IconsContainer = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 50%;
+    justify-content: space-around;
+`
 
-    hr {
-        border: 2px solid ${({ theme }) => theme.fontColor};
-        width: 33px;
-    }
+export const GithubIcon = styled(Github)`
+    height: 44px;
+    color: ${({ theme }) => theme.fontColor };
+    margin: 0;
+    
+`
+export const NavHamburger = styled(MenuAlt3)`
+    margin-right: .5em;
+    height: 44px;
+    color: ${({ theme }) => theme.fontColor };
 
     @media only screen and (min-width: 415px) {
         display: none;

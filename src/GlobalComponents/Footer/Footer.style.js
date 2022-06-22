@@ -61,7 +61,8 @@ export const FooterIcons = styled.div`
     width: 50%;
 
     img {
-        height: 44px;
+        height: 32px;
+        margin-top: .1em;
     }
 
     div {
@@ -71,6 +72,7 @@ export const FooterIcons = styled.div`
         justify-content: space-around;
     }
 `
+
 export const FooterCopyright = styled.div`
     width: 100%;
     text-align: center;

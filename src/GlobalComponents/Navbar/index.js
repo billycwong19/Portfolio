@@ -1,7 +1,23 @@
 import React, { useState } from "react";
-import { NavbarContainer, NavbarLeft, NavLogo, NavList, NavListItem, NavHamburger, DropDownNavList, DropDownNavListContainer, Close, CurrentPageHighlight } from "./Navbar.style";
+import { 
+    NavbarContainer, 
+    NavbarLeft, 
+    NavLogo, 
+    LightDarkContainer,
+    Light,
+    Dark,
+    NavList, 
+    NavListItem, 
+    NavHamburger, 
+    DropDownNavList, 
+    DropDownNavListContainer, 
+    CloseContainer, 
+    CloseIcon, 
+    CurrentPageHighlight, 
+    GithubIcon, 
+    IconsContainer } from "./Navbar.style";
 import ToggleButton from '../ToggleButton'
-import { MdClose } from 'react-icons/md'
+
 
 export default function Navbar({ props }) {
     const [menuDropDown, setMenuDropDown] = useState(false)
@@ -16,10 +32,15 @@ export default function Navbar({ props }) {
             <NavbarLeft>
                 <NavLogo src="./logo192.png" alt="rounded logo" />
             </NavbarLeft>
-            {/* onload checks current theme and is checked if theme is dark */}
-            <ToggleButton toggle={ props.themeSwitcher } isChecked={isChecked} />
 
+            {/* onload checks current theme and is checked if theme is dark */}
+            <LightDarkContainer>
+                <Light>Light</Light>
+            <ToggleButton toggle={ props.themeSwitcher } isChecked={isChecked} />
+                <Dark>Dark</Dark>
+            </LightDarkContainer>
             {/* displays only if screensize is larger than 414 */}
+
             <NavList>
 
                 { props.currentPage === 'Projects' &&
@@ -37,12 +58,10 @@ export default function Navbar({ props }) {
                 }
                 
             </NavList>
+
             {/* displays only if screensize is smaller than 414px */}
-            <NavHamburger onClick={() => displayDropDown()}>
-            <hr />
-            <hr />
-            <hr />
-            </NavHamburger>
+
+            <NavHamburger onClick={() => displayDropDown()} />
             
         </NavbarContainer>
         
@@ -50,7 +69,7 @@ export default function Navbar({ props }) {
         
             <DropDownNavListContainer menuDropDown={menuDropDown} onClick={() => displayDropDown(false)}>
 
-                <Close onClick={() => displayDropDown(false)}><MdClose /></Close>
+                <CloseContainer onClick={() => displayDropDown(false)}><i><CloseIcon /></i></CloseContainer>
 
                 <DropDownNavList>
 
@@ -65,25 +84,25 @@ export default function Navbar({ props }) {
                         About</NavListItem>
 
                 { props.theme === 'light' ?
-                    <li>
+                    <IconsContainer>
                         <a href="https://github.com/billycwong19" target="_blank" rel="noopener noreferrer">
-                        <img src='./images/greengithub.png' alt="green github icon" />
+                        <GithubIcon />
                         </a>
                         <a href='mailto:billycwong19@gmail.com' target="_blank" rel="noopener noreferrer">
                         <img src='./images/gmailgreen.png' alt="gmail icon" />
                         </a>
-                    </li>
+                    </IconsContainer>
 
                         :
                         
-                    <li>
+                    <IconsContainer>
                         <a href="https://github.com/billycwong19" target="_blank" rel="noopener noreferrer">
-                        <img src='./images/whitegithub.png' alt="green github icon" />
+                        <GithubIcon />
                         </a>
                         <a href='mailto:billycwong19@gmail.com' target="_blank" rel="noopener noreferrer">
                         <img src='./images/whitegmail.png' alt="gmail icon" />
                         </a>
-                    </li>
+                    </IconsContainer>
                 }
 
                 </DropDownNavList>
