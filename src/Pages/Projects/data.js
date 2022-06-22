@@ -5,7 +5,8 @@ const projects = [
     screenshot: './images/karmaticdashboard.png',
     icon: './images/k_logo.png',
     link: 'https://serene-tor-70368.herokuapp.com/',
-    repo: 'https://github.com/Tim-Zebra/Karmatic'
+    repo: 'https://github.com/Tim-Zebra/Karmatic',
+    new: true,
     },
     {
     name: 'Pig-E',

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { NewReleases } from '@styled-icons/material-rounded/NewReleases'
 
 export const ProjectCardStyled = styled.div`
     width: 100%;
@@ -85,6 +86,14 @@ export const ProjectCardFooter = styled.div`
     display: flex;
     align-items: center;
     
+    div {
+        display: flex;
+        align-items: center;
+        transform: rotate(0);
+        h2 {
+            margin: 0;
+        }
+    }
 `
 
 export const ProjectLink = styled.a`
@@ -106,4 +115,10 @@ export const ProjectRepo = styled.a`
     &:hover {
         color: ${({ theme }) => theme.fontHover};
     }
+`
+
+export const NewIcon = styled(NewReleases)`
+    height: 33px;
+    margin: 0 1em 0 2em;
+    
 `
