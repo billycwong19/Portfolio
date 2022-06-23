@@ -3,7 +3,7 @@ import { AboutBody, AboutBanner } from "./About.style";
 
 export default function About() {
     return (
-        <AboutBody>
+        <AboutBody id={'about'}>
             <AboutBanner src='./images/aboutbanner.png' alt="about banner" />
             <div></div>
         </AboutBody>

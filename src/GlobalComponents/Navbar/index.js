@@ -13,16 +13,18 @@ import {
     DropDownNavListContainer, 
     CloseContainer, 
     CloseIcon, 
-    CurrentPageHighlight, 
     GithubIcon, 
     IconsContainer } from "./Navbar.style";
 import ToggleButton from '../ToggleButton'
+
 
 
 export default function Navbar({ props }) {
     const [menuDropDown, setMenuDropDown] = useState(false)
     const displayDropDown = (event) => menuDropDown === false ? setMenuDropDown(true) : setMenuDropDown(false);
     const isChecked = () => props.theme === 'dark' ? `checked` : ``;
+
+    
     
     return (
         <>
@@ -30,7 +32,7 @@ export default function Navbar({ props }) {
         <NavbarContainer>
 
             <NavbarLeft>
-                <NavLogo src="./logo192.png" alt="rounded logo" />
+                <NavLogo src="./logo192.png" alt="rounded logo" onClick={props.toggleHome}/>
             </NavbarLeft>
 
             {/* onload checks current theme and is checked if theme is dark */}
@@ -43,20 +45,22 @@ export default function Navbar({ props }) {
 
             <NavList>
 
-                { props.currentPage === 'Projects' &&
-                <>
-                <CurrentPageHighlight onClick={() => props.setCurrentPage('Projects')}>Projects</CurrentPageHighlight>
-                <NavListItem onClick={() => props.setCurrentPage('About')}>About</NavListItem>
-                </>
-                }
+                <NavListItem to='projects'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}  
+                    >Projects</NavListItem>
 
-                { props.currentPage === 'About' &&
-                <>
-                <NavListItem onClick={() => props.setCurrentPage('Projects')}>Projects</NavListItem>
-                <CurrentPageHighlight onClick={() => props.setCurrentPage('About')}>About</CurrentPageHighlight>
-                </>
-                }
-                
+                <NavListItem to='about'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={40}
+                    >About</NavListItem>
+
             </NavList>
 
             {/* displays only if screensize is smaller than 414px */}
@@ -73,17 +77,25 @@ export default function Navbar({ props }) {
 
                 <DropDownNavList>
 
-                    <NavListItem onClick={() => {
-                        props.setCurrentPage('Projects');
-                        displayDropDown(false)}}>
-                        Projects</NavListItem>
+                    <NavListItem to='projects'
+                        onClick={() => displayDropDown(false)}
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}
+                        >Projects</NavListItem>
 
-                    <NavListItem onClick={() => {
-                        props.setCurrentPage('About');
-                        displayDropDown(false)}}>
-                        About</NavListItem>
+                    <NavListItem to='about'
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80} 
+                        onClick={() => displayDropDown(false)}
+                        >About</NavListItem>
 
-                { props.theme === 'light' ?
+                { props.themeState === 'light' ?
                     <IconsContainer>
                         <a href="https://github.com/billycwong19" target="_blank" rel="noopener noreferrer">
                         <GithubIcon />

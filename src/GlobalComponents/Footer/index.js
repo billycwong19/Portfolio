@@ -1,15 +1,32 @@
 import React from "react";
-import { FooterContainer, FooterInfo, FooterIcons, FooterCopyright } from "./Footer.style";
+import { ReturnToTop, FooterContainer, FooterReturnToTopContainer, FooterInfo, FooterIcons, FooterListItem, FooterCopyright } from "./Footer.style";
 import { GithubIcon } from "../Navbar/Navbar.style";
 
 export default function Footer({props}){
     return (
+        <>
+            <FooterReturnToTopContainer>
+                    <ReturnToTop onClick={() => props.toggleHome()} />
+                    <div><em>TOP</em></div>
+            </FooterReturnToTopContainer>
         <FooterContainer>
             <FooterInfo>
                 <p>Content</p>
-                <li onClick={() => props.setCurrentPage('Projects')}>Projects</li>
-                <li onClick={() => props.setCurrentPage('About')}>About</li>
-                <li>Contact</li>
+                <FooterListItem to='projects'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}
+                >Projects</FooterListItem>
+                <FooterListItem to='about'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}
+                >About</FooterListItem>
+                <FooterListItem to='contact'>Contact</FooterListItem>
             </FooterInfo>
             <FooterIcons>
 
@@ -36,5 +53,7 @@ export default function Footer({props}){
             </FooterIcons>
             <FooterCopyright>&copy; 2022 William Wong</FooterCopyright>
         </FooterContainer>
+    </>
     )
+
 }

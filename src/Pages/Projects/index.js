@@ -5,7 +5,7 @@ import projects from './data'
 
 export default function Projects(){
     return(
-        <ProjectsBody>
+        <ProjectsBody id={'projects'}>
             <ProjectsBanner src='./images/projectsbanner.png' />
 
             <ProjectsContainer>

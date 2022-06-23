@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./GlobalStyles/GlobalStyles.style";
 import { lightTheme, darkTheme } from './GlobalStyles/Themes.style'
+import { animateScroll as scroll } from 'react-scroll'
 
 import Navbar from "./GlobalComponents/Navbar/";
 import Footer from "./GlobalComponents/Footer";
-import Projects from './Pages/Projects/'
-import About from './Pages/About/About'
+// import Projects from './Pages/Projects/'
+// import About from './Pages/About/About'
+import Home from './Pages'
 
 const themeSetter = () => {
     let currentDate = new Date();
@@ -17,24 +19,20 @@ const themeSetter = () => {
 
 
 function App() {
-    const [theme, setTheme] = useState(themeSetter())
-    const [currentPage, setCurrentPage] = useState('Projects')
-    const themeSwitcher = () => theme === 'light' ? setTheme('dark') : setTheme('light');
-    const renderCurrentPage= () => {
-      if (currentPage === 'Projects') {
-        return <Projects />
-      }
-      if (currentPage === 'About') {
-        return <About />
-      }
-    }
+    const [themeState, setTheme] = useState(themeSetter())
+    const themeSwitcher = () => themeState === 'light' ? setTheme('dark') : setTheme('light');
+
+    const toggleHome = (event) => {
+      scroll.scrollToTop();
+  }
 
   return (
-    <ThemeProvider theme={ theme === 'light' ? lightTheme : darkTheme }>
+    <ThemeProvider theme={ themeState === 'light' ? lightTheme : darkTheme }>
       <GlobalStyles />
-      <Navbar props={{ themeSwitcher, setCurrentPage, currentPage, theme }} />
-      {renderCurrentPage()}
-      <Footer props={{ setCurrentPage, theme }}/>
+      <Navbar props={{ themeSwitcher, themeState, toggleHome }} />
+      {/* {renderCurrentPage()} */}
+      <Home />
+      <Footer props={{ themeState, toggleHome }}/>
     </ThemeProvider>
   );
 }

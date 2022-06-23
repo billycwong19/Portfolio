@@ -4,6 +4,8 @@ import { MenuAlt3 } from '@styled-icons/heroicons-outline/MenuAlt3'
 import { Github } from '@styled-icons/boxicons-logos/Github'
 import { LightMode } from '@styled-icons/material-twotone/LightMode'
 import { Nightlight } from '@styled-icons/material-twotone/Nightlight'
+import { Link as LinkS } from 'react-scroll'
+
 
 export const NavbarContainer = styled.div`
     width: 100%;
@@ -56,12 +58,17 @@ export const NavList = styled.div`
 
 `
 
-export const NavListItem = styled.li`
+export const NavListItem = styled(LinkS)`
     color: ${({ theme }) => theme.fontColor };
     border-bottom: 2px solid ${({ theme }) => theme.borderHighlightOpaque };
     padding: 0.35em;
     transition: .4s ease-in-out;
     -webkit-transition: .4s;
+
+    &.active { 
+        color: ${({ theme }) => theme.activeFontColor};
+        border-bottom: 2px solid ${({ theme }) => theme.borderHighlight };
+    }
 
     &:hover {
         color: ${({ theme }) => theme.fontHover }; 
@@ -74,8 +81,7 @@ export const NavListItem = styled.li`
 
 export const CurrentPageHighlight = styled.li`
     list-style: none;
-    color: ${({ theme }) => theme.activeFontColor};
-    border-bottom: 2px solid ${({ theme }) => theme.borderHighlight };
+    
     padding: .5em;
     cursor: pointer;
 

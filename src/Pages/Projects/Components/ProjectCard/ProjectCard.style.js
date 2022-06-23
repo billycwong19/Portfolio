@@ -80,7 +80,6 @@ export const ProjectDescription = styled.span`
     transition: .3s ease-in-out;
     opacity: 0;
     width: 100%;
-    height: 100vh;
     background-color: ${({ theme }) => theme.backgroundColor };
     color: ${({ theme }) => theme.fontColor };
     box-shadow: 0px 0px 10px ${({ theme }) => theme.borderHighlight } ;
