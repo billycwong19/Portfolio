@@ -1,26 +1,48 @@
-import React, { useState } from "react"; 
-import { ProjectCardStyled, ProjectCardHeader, ProjectTitle, ProjectDescription, ProjectIcon, ProjectCardBody, ProjectScreenShot, ProjectCardFooter, ProjectLink, ProjectRepo, NewIcon } from "./ProjectCard.style";
+import React from "react"; 
+import { 
+    ProjectCardStyled, 
+    ProjectCardHeader,
+    ProjectHeaderLeft,
+    ProjectHeaderRight,
+    ProjectTitle,
+    ProjectDescription, 
+    ProjectIcon,
+    ProjectCardBody, 
+    ProjectScreenShot, 
+    ProjectCardFooter, 
+    ProjectLink, 
+    ProjectRepo, 
+    NewIconContainer,
+    NewIcon } from "./ProjectCard.style";
 
 export default function ProjectCard({project}) {
-    const [displayScreenshot, setDisplayScreenshot] = useState(false)
-    const screenshot = (event) => setDisplayScreenshot(!displayScreenshot)
-
     return(
         <>
-        
         <ProjectCardStyled>
         <hr />
             <ProjectCardHeader>
+                <ProjectHeaderLeft>
                 { project.icon && 
                 <ProjectIcon src={project.icon} alt={`${project.name} icon`} />
                 }
                 <ProjectTitle>
-                    {project.name}
-                    
-                    <ProjectDescription>{project.description}</ProjectDescription>
-                    
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <h3>{project.name}</h3>
+                    </a>
                 </ProjectTitle>
-                <div>more info</div>   
+                </ProjectHeaderLeft>
+                { project.new && 
+                    <NewIconContainer>
+                    <NewIcon />
+                    <h2>NEW</h2>
+                    </NewIconContainer>
+                }
+                <ProjectHeaderRight>
+                    <p>more info 
+                    <ProjectDescription className="description">{project.description}</ProjectDescription>
+                    </p>
+                    
+                </ProjectHeaderRight>   
             </ProjectCardHeader>
 
             <ProjectCardBody>
@@ -32,12 +54,7 @@ export default function ProjectCard({project}) {
                 { project.repo &&
                 <ProjectRepo href={project.repo} target="_blank" rel="noopener noreferrer">Repo</ProjectRepo>
                 }
-                { project.new && 
-                    <div>
-                    <NewIcon />
-                    <h2>NEW</h2>
-                    </div>
-                }
+                
             </ProjectCardFooter>
         </ProjectCardStyled>
         </>
