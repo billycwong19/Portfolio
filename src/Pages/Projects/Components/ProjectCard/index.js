@@ -1,7 +1,10 @@
-import React from "react"; 
+import React, { useState } from "react"; 
 import { ProjectCardStyled, ProjectCardHeader, ProjectTitle, ProjectDescription, ProjectIcon, ProjectCardBody, ProjectScreenShot, ProjectCardFooter, ProjectLink, ProjectRepo, NewIcon } from "./ProjectCard.style";
 
 export default function ProjectCard({project}) {
+    const [displayScreenshot, setDisplayScreenshot] = useState(false)
+    const screenshot = (event) => setDisplayScreenshot(!displayScreenshot)
+
     return(
         <>
         
@@ -15,8 +18,9 @@ export default function ProjectCard({project}) {
                     {project.name}
                     
                     <ProjectDescription>{project.description}</ProjectDescription>
+                    
                 </ProjectTitle>
-
+                <div>more info</div>   
             </ProjectCardHeader>
 
             <ProjectCardBody>

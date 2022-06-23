@@ -25,7 +25,6 @@ export const ProjectCardHeader = styled.div`
     height: 4em;
     display: flex;
     align-items: center;
-    margin-top: 2em;
 `
 
 export const ProjectTitle = styled.div`
@@ -73,11 +72,12 @@ export const ProjectCardBody = styled.div`
     height: 24em;
     display: flex;
     align-items: center;
+    
 `
 
 export const ProjectScreenShot = styled.img`
-    max-height: 24em;
-    width:100%;
+    max-width: 100%;
+    max-height: 100%;
     
 `
 
@@ -85,6 +85,7 @@ export const ProjectCardFooter = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
+    margin: 2em 0;
     
     div {
         display: flex;
