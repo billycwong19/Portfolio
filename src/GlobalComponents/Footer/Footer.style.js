@@ -15,6 +15,7 @@ export const FooterReturnToTopContainer = styled.div`
     margin:.5em 0;
     width: 100%;
     text-align: center;
+    color: ${({ theme }) => theme.fontColor };
 `
 export const ReturnToTop = styled(VerticalAlignTop)`
     color: ${({ theme }) => theme.fontColor };

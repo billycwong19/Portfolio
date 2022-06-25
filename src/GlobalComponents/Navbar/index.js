@@ -22,7 +22,7 @@ import ToggleButton from '../ToggleButton'
 export default function Navbar({ props }) {
     const [menuDropDown, setMenuDropDown] = useState(false)
     const displayDropDown = (event) => menuDropDown === false ? setMenuDropDown(true) : setMenuDropDown(false);
-    const isChecked = () => props.theme === 'dark' ? `checked` : ``;
+    const isChecked = () => props.themeState === 'dark' ? `checked` : ``;
 
     
     
@@ -58,8 +58,16 @@ export default function Navbar({ props }) {
                     duration={500}
                     spy={true}
                     exact='true'
-                    offset={40}
+                    offset={-80}
                     >About</NavListItem>
+
+                <NavListItem to='contact'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}
+                    >Contact</NavListItem>
 
             </NavList>
 
@@ -94,6 +102,15 @@ export default function Navbar({ props }) {
                         offset={-80} 
                         onClick={() => displayDropDown(false)}
                         >About</NavListItem>
+
+                    <NavListItem to='contact'
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80} 
+                        onClick={() => displayDropDown(false)}
+                        >Contact</NavListItem>
 
                 { props.themeState === 'light' ?
                     <IconsContainer>

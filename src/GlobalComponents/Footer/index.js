@@ -26,11 +26,17 @@ export default function Footer({props}){
                     exact='true'
                     offset={-80}
                 >About</FooterListItem>
-                <FooterListItem to='contact'>Contact</FooterListItem>
+                <FooterListItem to='contact'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}
+                >Contact</FooterListItem>
             </FooterInfo>
             <FooterIcons>
 
-            { props.theme === 'light' ?
+            { props.themeState === 'light' ?
                 <div>
                     <a href="https://github.com/billycwong19" target="_blank" rel="noopener noreferrer">
                     <GithubIcon src='./images/greengithub.png' alt="green github icon" />

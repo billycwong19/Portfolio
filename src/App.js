@@ -17,7 +17,6 @@ const themeSetter = () => {
     return currentHour > 20 ? 'dark' : currentHour < 20 && currentHour > 7 ? 'light' : 'dark';
 }
 
-
 function App() {
     const [themeState, setTheme] = useState(themeSetter())
     const themeSwitcher = () => themeState === 'light' ? setTheme('dark') : setTheme('light');
@@ -27,11 +26,11 @@ function App() {
   }
 
   return (
-    <ThemeProvider theme={ themeState === 'light' ? lightTheme : darkTheme }>
+    <ThemeProvider theme={ themeState === 'light' ? lightTheme : darkTheme } >
       <GlobalStyles />
       <Navbar props={{ themeSwitcher, themeState, toggleHome }} />
       {/* {renderCurrentPage()} */}
-      <Home />
+      <Home props={{ themeState }} />
       <Footer props={{ themeState, toggleHome }}/>
     </ThemeProvider>
   );
