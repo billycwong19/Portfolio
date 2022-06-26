@@ -12,13 +12,6 @@ export default function Footer({props}){
         <FooterContainer>
             <FooterInfo>
                 <p>Content</p>
-                <FooterListItem to='projects'
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact='true'
-                    offset={-80}
-                >Projects</FooterListItem>
                 <FooterListItem to='about'
                     smooth={true}
                     duration={500}
@@ -26,6 +19,13 @@ export default function Footer({props}){
                     exact='true'
                     offset={-80}
                 >About</FooterListItem>
+                <FooterListItem to='projects'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}
+                >Projects</FooterListItem>
                 <FooterListItem to='contact'
                     smooth={true}
                     duration={500}

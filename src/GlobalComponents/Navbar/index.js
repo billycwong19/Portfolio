@@ -45,14 +45,6 @@ export default function Navbar({ props }) {
 
             <NavList>
 
-                <NavListItem to='projects'
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact='true'
-                    offset={-80}  
-                    >Projects</NavListItem>
-
                 <NavListItem to='about'
                     smooth={true}
                     duration={500}
@@ -60,6 +52,14 @@ export default function Navbar({ props }) {
                     exact='true'
                     offset={-80}
                     >About</NavListItem>
+
+                <NavListItem to='projects'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}  
+                    >Projects</NavListItem>
 
                 <NavListItem to='contact'
                     smooth={true}
@@ -85,15 +85,6 @@ export default function Navbar({ props }) {
 
                 <DropDownNavList>
 
-                    <NavListItem to='projects'
-                        onClick={() => displayDropDown(false)}
-                        smooth={true}
-                        duration={500}
-                        spy={true}
-                        exact='true'
-                        offset={-80}
-                        >Projects</NavListItem>
-
                     <NavListItem to='about'
                         smooth={true}
                         duration={500}
@@ -102,6 +93,15 @@ export default function Navbar({ props }) {
                         offset={-80} 
                         onClick={() => displayDropDown(false)}
                         >About</NavListItem>
+
+                    <NavListItem to='projects'
+                        onClick={() => displayDropDown(false)}
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}
+                        >Projects</NavListItem>
 
                     <NavListItem to='contact'
                         smooth={true}

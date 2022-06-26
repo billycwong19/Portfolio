@@ -9,8 +9,8 @@ export default function Home({ props }) {
     return (
         <>
         <Hero props={props} />
-        <Projects />
         <About />
+        <Projects />
         <Contact />
         </>
     )

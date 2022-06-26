@@ -1,6 +1,7 @@
 import React from "react";  
 import { 
     SkillsContainer, 
+    SkillsLegend,
     SkillsCard, 
     ReactIcon, 
     StyledIcon, 
@@ -17,49 +18,64 @@ import {
     HeartIcon,
     MusicIcon,
     PlantIcon, 
-    FeedbackIcon } from "./Skills.style";
+    FeedbackIcon,
+    SkillIcon } from "./Skills.style";
 
 export default function Skills() {
     return (
         <>
         <SkillsContainer>
+
             <SkillsCard>
                 <div>
                     <h1><em>Hard Skills</em></h1>
                 </div>
                 <div>
                     <ReactIcon />
-                    React
+                    React<SkillIcon /> <SkillIcon />
                 </div>
                 <div>
                     <StyledIcon />
-                    Styled-Components
+                    Styled-Components <SkillIcon /> <SkillIcon />
                 </div>
                 <div>
                     <NodeIcon />
-                    Node.js
+                    Node.js <SkillIcon /> <SkillIcon />
                 </div>
                 <div>
                     <MongoIcon />
-                    MongoDB
+                    MongoDB <SkillIcon /> <SkillIcon />
                 </div>
                 <div>
                     <FigmaIcon />
-                    Figma
+                    Figma <SkillIcon />
                 </div>
                 <div>
                     <HandlebarsIcon />
-                    Handlebars.js
+                    Handlebars.js <SkillIcon /> <SkillIcon />
                 </div>
                 <div>
                     <HtmlIcon />
-                    HTML
+                    HTML <SkillIcon /> <SkillIcon /> <SkillIcon />
                 </div>
                 <div>
                     <CssIcon />
-                    CSS
+                    CSS <SkillIcon /> <SkillIcon />
                 </div>
             </SkillsCard>
+            <SkillsLegend>
+            <div>
+            Learning <SkillIcon />
+            </div>
+            <div>
+            Working <SkillIcon /> <SkillIcon />
+            </div>
+            <div>
+            Pro <SkillIcon /> <SkillIcon /> <SkillIcon />
+            </div>
+            </SkillsLegend>
+            <br />
+            <br />
             <SkillsCard>
                 <div>
                     <h1><em>Soft Skills</em></h1>
@@ -98,6 +114,8 @@ export default function Skills() {
                 </div>
                 
             </SkillsCard>
+
+            
         </SkillsContainer>
         </>
     )
