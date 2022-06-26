@@ -34,7 +34,6 @@ export default function ProjectCard({project}) {
                 { project.new && 
                     <NewIconContainer>
                     <NewIcon />
-                    <h2>NEW</h2>
                     </NewIconContainer>
                 }
                 <ProjectHeaderRight>

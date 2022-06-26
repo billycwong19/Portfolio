@@ -32,7 +32,7 @@ export const ContactForm = styled.form`
 `
 
 export const TextInput = styled.input`
-    color:${({ theme }) => theme.fontColor};
+    color:${({ theme }) => theme.fontGreen};
     width: 80%;
     font-size: 14px;
     padding: 1em ;
@@ -49,7 +49,6 @@ export const TextInput = styled.input`
 `
 
 export const TextAreaInput = styled.textarea`
-    color:${({ theme }) => theme.fontGreen};
     width: 80%;
     font-size: 14px;
     padding: 1em ;
@@ -85,4 +84,32 @@ export const ContactSubmit = styled.input`
     &:active {
         width: 49%;
     }
+`
+
+export const MessageSent = styled.div`
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: ${({ theme  }) => theme.bodyBackground};
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 1em;
+    height: 2em;
+    width: 200px;
+    position: fixed;
+    bottom: 24em;
+    background-color: ${({ theme  }) => theme.fontColor};
+    opacity: 0;
+    z-index: ${({ messageSentState }) => (messageSentState ? '5' : '-5')};
+    transition: .2s ease-in-out;
+    opacity: ${({ messageSentState }) => (messageSentState ? '1' : '0')};
+    box-shadow: 0 0 10px ${({ theme  }) => theme.fontColor};
+
+    p {
+        margin: 0;
+        text-align: center;
+        padding: 0;
+    }
+
+    
 `

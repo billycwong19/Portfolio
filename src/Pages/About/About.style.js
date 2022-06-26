@@ -17,6 +17,12 @@ export const AboutBanner = styled.img`
     max-width: 100%;
     opacity: 0.9;
 `
+export const BioContainer = styled.div`
+    border: 2px solid ${({ theme }) => theme.fontColor};
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+`
 
 export const ImageContainer = styled.div`
     display: flex;

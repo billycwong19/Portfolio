@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from 'emailjs-com'
 import { 
   ContactBody,
@@ -6,19 +6,27 @@ import {
   ContactForm, 
   TextInput,
   TextAreaInput,
-  ContactSubmit} from './Contact.style'
+  ContactSubmit,
+  MessageSent} from './Contact.style'
 
 
 
 const Contact = () => {
 
-  const form = useRef()
+    const [messageSentState, setMessageSentState] = useState(false)
+    const messageSent = () => {
+      setMessageSentState(!messageSentState)
+      setTimeout(() => setMessageSentState(false), 5000)
+    }
 
+  const form = useRef()
+  
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm('portfolio_contact_form', 'portfolio_contact_form', form.current, 'F9mX-PQe9dgT_coFy')
     .then((result) => {
-      alert(result.text)
+      console.log(result.text)
+      messageSent()
     }, (error) => {
       alert(error.text)
     })  
@@ -34,6 +42,12 @@ const Contact = () => {
             <TextInput type="email" name="email" placeholder='email' required />
             <TextAreaInput name="message" type="text" placeholder='message' required />
             <ContactSubmit type="submit" value="Send" />
+            <MessageSent messageSentState={messageSentState}>
+              <div>
+              <p>Message sent!</p> 
+              <p>I will get back to you soon.</p>
+              </div>
+            </MessageSent>
         </ContactForm>
     </ContactBody>
   )

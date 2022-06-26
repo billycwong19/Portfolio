@@ -6,8 +6,9 @@ export const lightTheme = {
     activeFontColor: '#454545',
     fontHover: '#454545', 
     headerFontColor: '#3D7937',
-    borderHighlight: 'rgb(100, 164, 94, 0.5)',
-    borderHighlightOpaque: 'rgb(100, 164, 94, 0.0)'
+    borderHighlight: 'rgb(100, 164, 94, 0.3)',
+    borderHighlightOpaque: 'rgb(100, 164, 94, 0.0)',
+    skillIcon: '#19130d',
 }
 
 export const darkTheme = {
@@ -18,7 +19,8 @@ export const darkTheme = {
     activeFontColor: '#64A45E',
     fontHover: '#64A45E',
     headerFontColor: '#fff',
-    borderHighlight: 'rgb(248, 248, 248, 0.5)',
-    borderHighlightOpaque: 'rgb(248, 248, 248, 0.0)'
+    borderHighlight: 'rgb(248, 248, 248, 0.3)',
+    borderHighlightOpaque: 'rgb(248, 248, 248, 0.0)',
+    skillIcon: '#64A45E',
 }
 

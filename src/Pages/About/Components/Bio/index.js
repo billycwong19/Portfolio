@@ -1,9 +1,12 @@
 import React from 'react'
+import { BioContainer } from './Bio.style'
 
 export default function Bio(){
     return (
-        <div>
-            lorem20
-        </div>
+        <BioContainer>
+            
+            
+            
+        </BioContainer>
     )
 }

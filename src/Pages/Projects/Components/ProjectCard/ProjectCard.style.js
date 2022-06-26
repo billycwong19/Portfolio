@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { NewReleases } from '@styled-icons/material-rounded/NewReleases'
+import { BurstNew } from '@styled-icons/foundation/BurstNew'
 
 export const ProjectCardStyled = styled.div`
     width: 100%;
@@ -155,8 +155,8 @@ export const NewIconContainer = styled.div`
     display: flex;
     align-items:center;
 `
-export const NewIcon = styled(NewReleases)`
-    height: 33px;
+export const NewIcon = styled(BurstNew)`
+    height: 48px;
     margin: 0 1em 0 2em;
     
 `
