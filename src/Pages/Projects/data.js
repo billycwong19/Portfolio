@@ -2,6 +2,7 @@ const projects = [
     {
     name: 'Karmatic',
     description: `Karmatic is a community hub created to empower individuals to reach out for help in exchange for Karma Coins, which can be used to post for help.`,
+    role: 'I played front-end lead for this project and managed to conceive the application from the bottom up as far as visuals and interactions go. I based everything off of designs that I created.',
     screenshot: './images/karmaticdashboard.png',
     icon: './images/k_logo.png',
     link: 'https://serene-tor-70368.herokuapp.com/',
@@ -31,7 +32,7 @@ const projects = [
     link: 'https://gist.github.com/billycwong19/0da10319cd36a186214e369bae64ae5c',
     },
     {
-    name: 'On This Day in History',
+    name: 'On This Day',
     description: 'On This Day in History utilizes fetch calls to an external API and a dynamic front-end changing day to day and on refresh.',
     screenshot: './images/onthisdayscreenshot.png',
     link: 'https://stiltskinner.github.io/This-Day-In-History/',

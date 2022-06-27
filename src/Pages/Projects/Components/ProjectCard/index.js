@@ -4,15 +4,13 @@ import {
     ProjectCardHeader,
     ProjectHeaderLeft,
     ProjectHeaderRight,
+    MoreInfo,
     ProjectTitle,
     ProjectDescription, 
     ProjectIcon,
-    ProjectCardBody, 
     ProjectScreenShot, 
-    ProjectCardFooter, 
     ProjectLink, 
     ProjectRepo, 
-    NewIconContainer,
     NewIcon } from "./ProjectCard.style";
 
 export default function ProjectCard({project}) {
@@ -22,39 +20,45 @@ export default function ProjectCard({project}) {
         <hr />
             <ProjectCardHeader>
                 <ProjectHeaderLeft>
+
                 { project.icon && 
                 <ProjectIcon src={project.icon} alt={`${project.name} icon`} />
                 }
+                
                 <ProjectTitle>
                     <a href={project.link} target="_blank" rel="noopener noreferrer">
                     <h3>{project.name}</h3>
                     </a>
+                    
                 </ProjectTitle>
+
+                    { project.new && 
+                        <NewIcon />
+                    }
+
                 </ProjectHeaderLeft>
-                { project.new && 
-                    <NewIconContainer>
-                    <NewIcon />
-                    </NewIconContainer>
-                }
+                
                 <ProjectHeaderRight>
-                    <p>more info 
-                    <ProjectDescription className="description">{project.description}</ProjectDescription>
-                    </p>
+                    
+
+                    <ProjectLink href={project.link} target="_blank" rel="noopener noreferrer">View</ProjectLink>
+                    
+                    { project.repo &&
+                    <ProjectRepo href={project.repo} target="_blank" rel="noopener noreferrer">Repo</ProjectRepo>
+                    }
+
+                        <MoreInfo>more info 
+                        <ProjectDescription className="description">
+                            <div>
+                            <p>{project.description}</p>
+                            <p>{project.role}</p>
+                            <ProjectScreenShot src={project.screenshot} alt={`${project.name} screenshot`} />
+                            </div>
+                        </ProjectDescription>
+                        </MoreInfo>
                     
                 </ProjectHeaderRight>   
             </ProjectCardHeader>
-
-            <ProjectCardBody>
-                <ProjectScreenShot src={project.screenshot} alt={`${project.name} screenshot`} />
-            </ProjectCardBody>
-            
-            <ProjectCardFooter>
-                <ProjectLink href={project.link} target="_blank" rel="noopener noreferrer">View</ProjectLink>
-                { project.repo &&
-                <ProjectRepo href={project.repo} target="_blank" rel="noopener noreferrer">Repo</ProjectRepo>
-                }
-                
-            </ProjectCardFooter>
         </ProjectCardStyled>
         </>
     )

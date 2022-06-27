@@ -21,27 +21,26 @@ export const ProjectCardStyled = styled.div`
 
 export const ProjectCardHeader = styled.div`
     width: 100%;
-    height: 4em;
+    height: 6em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 `
 export const ProjectHeaderLeft = styled.div`
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    &:hover {
-        color: ${({ theme }) => theme.fontHover };
-        }
+    width: 48%;
+    margin-left: .5em;
 `
 export const ProjectHeaderRight = styled.div`
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    width: 48%;
+    justify-content: space-between;
     margin-right: .5em;
-    
-    p { 
+`
+export const MoreInfo = styled.div`
         border-bottom: 1px dotted ${({ theme }) => theme.borderHighlight };
         
         &:hover {
@@ -49,13 +48,10 @@ export const ProjectHeaderRight = styled.div`
             cursor: pointer;
         }
 
-        &:hover span {
+        &:hover div {
             opacity: 1;
             z-index: 1;
         }
-    }
-
-    
 `
 
 export const ProjectTitle = styled.div`
@@ -76,37 +72,37 @@ export const ProjectTitle = styled.div`
     
 `
 
-export const ProjectDescription = styled.span`
+export const ProjectDescription = styled.div`
     transition: .3s ease-in-out;
-    opacity: 0;
     width: 100%;
+    opacity: 0;
     background-color: ${({ theme }) => theme.backgroundColor };
     color: ${({ theme }) => theme.fontColor };
     box-shadow: 0px 0px 10px ${({ theme }) => theme.borderHighlight } ;
     text-align: center;
-    padding: 2em 0;
-    border-radius: 10px;
     position: absolute;
     z-index: -1;
     margin-top: 2em;
     left: 0;
+    
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        overflow-y: scroll;
+        margin-bottom: 2em;
+        padding: 2em;
+    }
 
     @media only screen and (min-width: 414px) {
-        
     }
 `
 
 export const ProjectIcon = styled.img`
     width: 44px;
-    margin: 0 .5em;
-`
-
-export const ProjectCardBody = styled.div`
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    
 `
 
 export const ProjectScreenShot = styled.img`
@@ -115,27 +111,10 @@ export const ProjectScreenShot = styled.img`
     
 `
 
-export const ProjectCardFooter = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin: 2em 0;
-    
-    div {
-        display: flex;
-        align-items: center;
-        transform: rotate(0);
-        h2 {
-            margin: 0;
-        }
-    }
-`
-
 export const ProjectLink = styled.a`
     text-decoration: none;
     color: ${({ theme }) => theme.fontColor};
     font-weight: 600;
-    margin: 0 1em;
 
     &:hover {
         color: ${({ theme }) => theme.fontHover};
@@ -151,12 +130,25 @@ export const ProjectRepo = styled.a`
         color: ${({ theme }) => theme.fontHover};
     }
 `
-export const NewIconContainer = styled.div`
-    display: flex;
-    align-items:center;
-`
+
 export const NewIcon = styled(BurstNew)`
     height: 48px;
-    margin: 0 1em 0 2em;
+
+    &:hover { 
+    animation: brighten 1s infinite;
+    animation-timing-function: linear;
+    }
+
+    @keyframes brighten {
+        0% { 
+            transform: scale(1);
+        }
+        50% { 
+            transform: scale(1.2);
+        }
+        100% { 
+            transform: scale(1);
+        }
+    }
     
 `

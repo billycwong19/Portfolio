@@ -43,10 +43,8 @@ const Contact = () => {
             <TextAreaInput name="message" type="text" placeholder='message' required />
             <ContactSubmit type="submit" value="Send" />
             <MessageSent messageSentState={messageSentState}>
-              <div>
               <p>Message sent!</p> 
               <p>I will get back to you soon.</p>
-              </div>
             </MessageSent>
         </ContactForm>
     </ContactBody>

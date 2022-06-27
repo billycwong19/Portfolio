@@ -17,12 +17,6 @@ export const AboutBanner = styled.img`
     max-width: 100%;
     opacity: 0.9;
 `
-export const BioContainer = styled.div`
-    border: 2px solid ${({ theme }) => theme.fontColor};
-    border-radius: 5px;
-    padding: 1em;
-    text-align: center;
-`
 
 export const ImageContainer = styled.div`
     display: flex;
@@ -48,6 +42,29 @@ export const AboutImage = styled.img`
     
     margin: 0 auto;
 
+    &:hover { 
+    animation: pulse 1s 1;
+    animation-timing-function: linear;
+    }
+
+    @keyframes pulse {
+        0% { 
+            transform: scale(1) rotate(0deg);
+        }
+        25% { 
+            transform: scale(1.1) rotate(22.5deg);
+        }
+        50% { 
+            transform: scale(1.1) rotate(0deg); 
+        }
+        75% { 
+            transform: scale(1.1) rotate(-22.5deg);
+        }
+        100% { 
+            transform: scale(1) rotate(0deg);
+        }
+    }
+
     @media only screen and (min-width: 415px) {
         width: 50%; 
                
@@ -57,7 +74,9 @@ export const AboutImage = styled.img`
         object-fit: contain;       
     }
 `
-
+export const BandcampLink = styled.div`
+    
+`
 
 
 export const PaperClipIcon = styled(PaperClip)`
