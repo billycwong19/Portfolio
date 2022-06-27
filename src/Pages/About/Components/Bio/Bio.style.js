@@ -30,9 +30,7 @@ export const InfoBoxes = styled.div`
     justify-content: space-around;
 `
 export const EducationContainer = styled.div`
-    border: 2px solid ${({ theme }) => theme.fontColor };
-    border-radius: 5px;
-    width: 40%;
+    padding: 0 .5em;
 
     p {
         font-size: 14px;
