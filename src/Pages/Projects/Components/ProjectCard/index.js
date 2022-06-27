@@ -1,4 +1,4 @@
-import React from "react"; 
+import React, { useState } from "react"; 
 import { 
     ProjectCardStyled, 
     ProjectCardHeader,
@@ -7,13 +7,19 @@ import {
     MoreInfo,
     ProjectTitle,
     ProjectDescription, 
+    CloseIcon,
     ProjectIcon,
-    ProjectScreenShot, 
+    ProjectImage, 
     ProjectLink, 
     ProjectRepo, 
     NewIcon } from "./ProjectCard.style";
 
-export default function ProjectCard({project}) {
+export default function ProjectCard({ project }) {
+    const { icon, name, link, repo, description, role, images, newProject } = project
+    
+    const [moreInfoPopUp, setMoreInfoPopUp] = useState(false)
+    const showMoreInfoPopUp = () => setMoreInfoPopUp(!moreInfoPopUp)
+
     return(
         <>
         <ProjectCardStyled>
@@ -21,18 +27,18 @@ export default function ProjectCard({project}) {
             <ProjectCardHeader>
                 <ProjectHeaderLeft>
 
-                { project.icon && 
-                <ProjectIcon src={project.icon} alt={`${project.name} icon`} />
+                { icon && 
+                <ProjectIcon src={icon} alt={`${name} icon`} />
                 }
                 
                 <ProjectTitle>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <h3>{project.name}</h3>
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                    <h3>{name}</h3>
                     </a>
                     
                 </ProjectTitle>
 
-                    { project.new && 
+                    { newProject && 
                         <NewIcon />
                     }
 
@@ -41,21 +47,28 @@ export default function ProjectCard({project}) {
                 <ProjectHeaderRight>
                     
 
-                    <ProjectLink href={project.link} target="_blank" rel="noopener noreferrer">View</ProjectLink>
+                    <ProjectLink href={link} target="_blank" rel="noopener noreferrer">View</ProjectLink>
                     
-                    { project.repo &&
-                    <ProjectRepo href={project.repo} target="_blank" rel="noopener noreferrer">Repo</ProjectRepo>
+                    { repo &&
+                    <ProjectRepo href={repo} target="_blank" rel="noopener noreferrer">Repo</ProjectRepo>
                     }
 
-                        <MoreInfo>more info 
-                        <ProjectDescription className="description">
+                        <MoreInfo onClick={() => showMoreInfoPopUp()}>
+                            <p>more info</p>
+                        </MoreInfo>
+                        <ProjectDescription moreInfoPopUp={ moreInfoPopUp } onClick={() => showMoreInfoPopUp()}>
                             <div>
-                            <p>{project.description}</p>
-                            <p>{project.role}</p>
-                            <ProjectScreenShot src={project.screenshot} alt={`${project.name} screenshot`} />
+                            <CloseIcon />
+                            <p>{description}</p>
+                            {role}
+                        
+                            { images && images.map((image, i) => 
+                                <ProjectImage src={image} alt={`image ${name}`} key={i} />
+                            )}
+
                             </div>
                         </ProjectDescription>
-                        </MoreInfo>
+                        
                     
                 </ProjectHeaderRight>   
             </ProjectCardHeader>

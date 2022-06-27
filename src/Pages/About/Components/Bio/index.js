@@ -6,7 +6,7 @@ export default function Bio(){
     const displayMoreInfo = () => setMoreInfoState(!moreInfoState)
     return (
         <BioContainer>
-            <p>I am a self-taught developer with a curiosity towards pixel perfection and crafting satisfying UI/UX interfaces. 
+            <p>I am a self-taught developer with a curiosity towards pixel perfection and crafting satisfying UI/UX interfaces.</p> 
                 { moreInfoState === false ? 
                 <MoreInfo onClick={() => displayMoreInfo()}>
                     more info 
@@ -16,7 +16,7 @@ export default function Bio(){
                     hide 
                 </MoreInfo>
                 }
-            </p>
+            
             <HiddenBio moreInfoState={moreInfoState}>
             <p>I have spent the past couple of years working under the guidance of Professor Internet and, recently, I have finished a three month bootcamp to blast over some technologies and practices that have helped me code with intent and with a new found love for CSS.</p>
             <p>Currently, I am creating a React component library that contains highly reusable UI components such as a contact form, navbar, or calendar. The code base for the components are simple and I intend to expand on the features and accumulate a UI library for myself and the internet at large to use. </p>

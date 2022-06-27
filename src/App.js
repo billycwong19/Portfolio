@@ -14,7 +14,7 @@ const themeSetter = () => {
     let currentDate = new Date();
     let currentHour = currentDate.getHours()
 
-    return currentHour > 20 ? 'dark' : currentHour < 20 && currentHour > 7 ? 'light' : 'dark';
+    return currentHour > 20 || currentHour < 7 ? 'dark' : 'light';
 }
 
 function App() {

@@ -7,7 +7,7 @@ export const BioContainer = styled.div`
     text-align: center;
 `
 
-export const MoreInfo = styled.p`
+export const MoreInfo = styled.div`
     color: ${({ theme }) => theme.skillIcon};
 
     &:hover {

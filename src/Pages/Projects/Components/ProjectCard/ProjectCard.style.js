@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { BurstNew } from '@styled-icons/foundation/BurstNew'
+import { Close } from '@styled-icons/evil/Close'
 
 export const ProjectCardStyled = styled.div`
     width: 100%;
@@ -42,15 +43,12 @@ export const ProjectHeaderRight = styled.div`
 `
 export const MoreInfo = styled.div`
         border-bottom: 1px dotted ${({ theme }) => theme.borderHighlight };
-        
-        &:hover {
+        p {
+            margin: 0;
+        }
+        p:hover {
             color: ${({ theme }) => theme.fontHover };
             cursor: pointer;
-        }
-
-        &:hover div {
-            opacity: 1;
-            z-index: 1;
         }
 `
 
@@ -73,26 +71,23 @@ export const ProjectTitle = styled.div`
 `
 
 export const ProjectDescription = styled.div`
-    transition: .3s ease-in-out;
     width: 100%;
-    opacity: 0;
-    background-color: ${({ theme }) => theme.backgroundColor };
-    color: ${({ theme }) => theme.fontColor };
-    box-shadow: 0px 0px 10px ${({ theme }) => theme.borderHighlight } ;
-    text-align: center;
-    position: absolute;
-    z-index: -1;
-    margin-top: 2em;
+    height: 100%;
+    background-color: ${({ theme }) => theme.backgroundColor} ;
+    position: fixed;
+    bottom: 0;
     left: 0;
-    
+    z-index: ${({ moreInfoPopUp }) => (moreInfoPopUp ? '2' : '-7')};;
+    transition: 0.6s ease-in-out;
+    opacity: ${({ moreInfoPopUp }) => (moreInfoPopUp ? '1' : '0')};
+    bottom: ${({ moreInfoPopUp }) => (moreInfoPopUp ? '0' : '-100%')};
+    overflow: scroll;
 
     div {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
-        overflow: hidden;
-        overflow-y: scroll;
         margin-bottom: 2em;
         padding: 2em;
     }
@@ -101,11 +96,27 @@ export const ProjectDescription = styled.div`
     }
 `
 
+export const CloseIcon = styled(Close)`
+    color: ${({ theme }) => theme.fontColor };
+    transition: .5s ease-in-out;
+    height: 44px;
+    margin: .5em;
+    align-self: flex-end;
+    
+
+    &:hover {
+        color: ${({ theme }) => theme.fontHover }; 
+        cursor: pointer;
+        transform: rotate(180deg);
+    }
+
+`
+
 export const ProjectIcon = styled.img`
     width: 44px;
 `
 
-export const ProjectScreenShot = styled.img`
+export const ProjectImage = styled.img`
     max-width: 100%;
     max-height: 100%;
     
