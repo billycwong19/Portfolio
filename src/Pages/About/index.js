@@ -31,7 +31,7 @@ export default function About() {
             
             <ImageContainer>
                 <ImageCard>
-                    <div>Hey, I'm William Wong!</div>
+                    <div>Hey, I'm William!</div>
                     <AboutImage src="./images/squareselfie.png" alt='avatar' />
                 </ImageCard>
                 <ImageCard>

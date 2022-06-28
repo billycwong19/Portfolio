@@ -6,7 +6,7 @@ export default function Bio(){
     const displayMoreInfo = () => setMoreInfoState(!moreInfoState)
     return (
         <BioContainer>
-            <p>I am a self-taught developer with a curiosity towards pixel perfection and crafting satisfying UI/UX interfaces.</p> 
+            <h2>I am a self-taught developer with a curiosity towards pixel perfection and crafting satisfying UI/UX interfaces.</h2> 
                 { moreInfoState === false ? 
                 <MoreInfo onClick={() => displayMoreInfo()}>
                     more info 

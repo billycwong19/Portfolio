@@ -1,5 +1,8 @@
 import React from   'react'
-import { HeroContainer } from './Hero.style'
+import { HeroContainer, NameContainer, PositionContainer, Letter } from './Hero.style'
+
+const name = `William Wong`
+const position = `Web Developer`
 
 export default function Hero({ props }){
     return(
@@ -10,6 +13,16 @@ export default function Hero({ props }){
             :
                 <img src='./images/darkhero.png' alt='darkhero banner' />
             }
+            <NameContainer>
+            { name.split('').map((letter) => 
+                <Letter>{letter}</Letter>
+            )}
+            </NameContainer>
+            <PositionContainer>
+            { position.split('').map((letter) => 
+                <Letter><em>{letter}</em></Letter>
+            )}
+            </PositionContainer>
         </HeroContainer>
         </>
     )
