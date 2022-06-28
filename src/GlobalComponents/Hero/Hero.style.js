@@ -25,7 +25,7 @@ export const PositionContainer = styled (NameContainer)`
 export const Letter = styled.div`
     color: ${({ theme }) => theme.fontColor };
     height: 50px;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 400;
     transition: .2s ease-in-out;
     display: flex;
