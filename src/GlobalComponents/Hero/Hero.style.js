@@ -13,7 +13,8 @@ export const NameContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     cursor: default;
-    margin-left: 1em;
+    justify-content: center;
+
 `
 
 export const PositionContainer = styled (NameContainer)`

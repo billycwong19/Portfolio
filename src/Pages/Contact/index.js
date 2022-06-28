@@ -37,9 +37,10 @@ const Contact = () => {
   return (
     <ContactBody id={'contact'}>
         <ContactBanner src='./images/contactbanner.png' alt='contact banner' />
+        <p>send me a message!</p>
         <ContactForm ref={form} onSubmit={sendEmail}>
-            <TextInput type="text" name="name" placeholder='name' required />
-            <TextInput type="email" name="email" placeholder='email' required />
+            <TextInput type="text" name="name" placeholder='your name' required />
+            <TextInput type="email" name="email" placeholder='your email' required />
             <TextAreaInput name="message" type="text" placeholder='message' required />
             <ContactSubmit type="submit" value="Send" />
             <MessageSent messageSentState={messageSentState}>

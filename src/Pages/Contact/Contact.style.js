@@ -5,7 +5,7 @@ export const ContactBody = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4em 0;
+    margin: 4em 0 2em 0;
 
 `
 
@@ -13,10 +13,11 @@ export const ContactBanner = styled.img`
     max-height: 150px;
     max-width: 100%;
     opacity: 0.9;
+    margin-bottom: 2em;
 `
 
 export const ContactForm = styled.form`
-    margin: 4em 0;
+    margin: 2em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
