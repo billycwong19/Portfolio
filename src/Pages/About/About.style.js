@@ -95,7 +95,7 @@ export const ResumeButton = styled.a`
     border-radius: 5px;
     background-color: ${({ theme }) => theme.fontGreen};
     color: ${({ theme }) => theme.backgroundColor };
-    margin-top: 2em;
+    margin-bottom: 2em;
 
     &:hover {
         background-color: ${({ theme }) => theme.borderHighlight};

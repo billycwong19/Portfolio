@@ -14,13 +14,13 @@ export default function Hero({ props }){
                 <img src='./images/darkhero.png' alt='darkhero banner' />
             }
             <NameContainer>
-            { name.split('').map((letter) => 
-                <Letter>{letter}</Letter>
+            { name.split('').map((letter, i) => 
+                <Letter key={`name ${letter} at ${i}`}>{letter}</Letter>
             )}
             </NameContainer>
             <PositionContainer>
-            { position.split('').map((letter) => 
-                <Letter><em>{letter}</em></Letter>
+            { position.split('').map((letter, i) => 
+                <Letter key={`position ${letter} at ${i}`}><em>{letter}</em></Letter>
             )}
             </PositionContainer>
         </HeroContainer>

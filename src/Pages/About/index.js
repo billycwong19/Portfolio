@@ -22,13 +22,14 @@ const styles = {
 export default function About() {
     return (
         <>
+        
         <AboutBody id={'about'}>
+            <ResumeButton href="./images/resume.pdf" target="_blank" rel="noreferrer">
+                <PaperClipIcon /> CV
+            </ResumeButton>
 
             <AboutBanner src='./images/aboutbanner.png' alt="about banner" />
-            <ResumeButton href="./images/resume.pdf" target="_blank" rel="noreferrer">
-            <PaperClipIcon /> CV
-            </ResumeButton>
-            
+        
             <ImageContainer>
                 <ImageCard>
                     <div>Hey, I'm William!</div>
