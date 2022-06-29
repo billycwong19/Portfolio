@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const HeroContainer = styled.div`
     margin-top: 4em;
-    
+    display: flex;
+    justify-content: center;
 
     img {
         max-height: 20em;
