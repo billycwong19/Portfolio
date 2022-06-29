@@ -4,14 +4,17 @@ export const HeroContainer = styled.div`
     margin-top: 4em;
     display: flex;
     justify-content: center;
+    width: 100%;
 
     img {
         max-height: 20em;
         max-width: 100%;
+
     }
 `
 
 export const NameContainer = styled.div`
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     cursor: default;
