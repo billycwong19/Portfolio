@@ -6,6 +6,7 @@ export const HeroContainer = styled.div`
 
     img {
         width: 100%;
+        max-height: 20em;
     }
 `
 
