@@ -9,6 +9,7 @@ import {
     MongoIcon, 
     NextIcon,
     FigmaIcon, 
+    JsIcon, 
     MysqlIcon,
     BulmaIcon,
     BootstrapIcon,
@@ -48,6 +49,10 @@ export default function Skills() {
                 <div>
                     <StyledIcon />
                     Styled-Components
+                </div>
+                <div>
+                    <JsIcon />
+                    JavaScript 
                 </div>
                 </SkillsCard>
 

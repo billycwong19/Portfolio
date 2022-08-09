@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { ProjectsBody, ProjectsBanner, ProjectsContainer } from "./Projects.style";
-
+import data from './data'
 import RepoCard from './Components/RepoCard/'
 
 import axios from 'axios'
@@ -35,12 +35,12 @@ export default function Projects(){
 
             <ProjectsContainer>
             
-            {/* { projects.map((project, i) => 
+            { data.map((repo, i) => 
   
-            <ProjectCard project={project} key={i} />
+            <RepoCard repo={repo} key={repo.name + i} />
             
-            )} */}
-
+            )}
+        
             { repos.filter(r => r.archived === false && r.name !== 'portfolio' && r.name !== 'billycwong19').map((repo) => 
             
             <RepoCard repo={repo} key={repo.id} />

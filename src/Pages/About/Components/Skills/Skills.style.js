@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { ReactLogo, Nodejs, Figma, Bootstrap } from '@styled-icons/boxicons-logos'
-import { Styledcomponents, Mongodb, Handlebarsdotjs, Express, Bulma, Nextdotjs, Mysql } from '@styled-icons/simple-icons'
+import { Styledcomponents, Mongodb, Handlebarsdotjs, Express, Bulma, Nextdotjs, Mysql, Javascript } from '@styled-icons/simple-icons'
 import { CommentDots, UserFriends } from '@styled-icons/fa-solid'
 import { Details } from '@styled-icons/material-sharp/Details'
 import { AllInclusive } from '@styled-icons/material/AllInclusive'
@@ -92,6 +92,10 @@ export const ReactIcon = styled(ReactLogo)`
 `
 
 export const NodeIcon = styled(Nodejs)`
+    height: 32px;
+    margin-right: .5em;
+`
+export const JsIcon = styled(Javascript)`
     height: 32px;
     margin-right: .5em;
 `
