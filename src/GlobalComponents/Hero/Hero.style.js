@@ -4,6 +4,7 @@ export const HeroContainer = styled.div`
     margin-top: 4em;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
 
     img {

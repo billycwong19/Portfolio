@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { ProjectsBody, ProjectsBanner, ProjectsContainer } from "./Projects.style";
-import ProjectCard from './Components/ProjectCard'
+
 import RepoCard from './Components/RepoCard/'
-import projects from './data'
+
 import axios from 'axios'
 
 
