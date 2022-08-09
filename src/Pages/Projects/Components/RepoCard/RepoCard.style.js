@@ -7,6 +7,7 @@ export const RepoCardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     border: 2px solid ${({ theme }) => theme.borderHighlight };
     border-radius: 10px;
@@ -47,7 +48,6 @@ export const JsIcon = styled(Javascript)`
 `
 
 export const RepoLanguage = styled.div`
-    justify-self: flex-end;
     display: flex;
     align-items: center;
 `

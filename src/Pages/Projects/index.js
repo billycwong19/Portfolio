@@ -20,7 +20,6 @@ export default function Projects(){
         const getRepos = async () => {
             try {
             const repos = await github.get('/users/billycwong19/repos')
-            console.log(repos.data)
             return setRepos(repos.data)
             } catch (error) {
                 console.log(error)
@@ -34,18 +33,13 @@ export default function Projects(){
             <ProjectsBanner src='./images/projectsbanner.png' />
 
             <ProjectsContainer>
-            
-            { data.map((repo, i) => 
-  
-            <RepoCard repo={repo} key={repo.name + i} />
-            
-            )}
         
             { repos.filter(r => r.archived === false && r.name !== 'portfolio' && r.name !== 'billycwong19').map((repo) => 
-            
+        
             <RepoCard repo={repo} key={repo.id} />
             
             )}
+            { data.map((repo, i) => <RepoCard repo={repo} key={repo.name + i} /> )}
             </ProjectsContainer>
         </ProjectsBody>
     )
