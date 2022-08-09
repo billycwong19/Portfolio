@@ -1,21 +1,17 @@
 import React from "react"; 
 import { 
     SkillsContainer, 
-    SkillsLegend,
     SkillsCard, 
     ReactIcon, 
     StyledIcon, 
-    HtmlIcon, 
-    CssIcon,
+    HandlebarsIcon,
     NodeIcon, 
     MongoIcon, 
+    NextIcon,
     FigmaIcon, 
-    HandlebarsIcon,
+    MysqlIcon,
+    BulmaIcon,
     BootstrapIcon,
-    AbletonIcon,
-    DrumIcon,
-    GuitarIcon,
-    MacOsIcon,
     CommunicateIcon, 
     TeamIcon,
     DetailIcon,
@@ -24,7 +20,7 @@ import {
     MusicIcon,
     PlantIcon, 
     FeedbackIcon,
-    SkillIcon } from "./Skills.style";
+    ExpressIcon } from "./Skills.style";
 
 export default function Skills() {
     return (
@@ -32,76 +28,56 @@ export default function Skills() {
         <SkillsContainer>
 
             <SkillsCard>
-                <>
-                    <h1><em>Hard Skills</em></h1>
-                </>
+                    <h1><em>Main Languages</em></h1>
                 <div>
-                    <ReactIcon />
-                    React<SkillIcon /> <SkillIcon />
+                    <MongoIcon />
+                    MongoDB 
                 </div>
                 <div>
-                    <StyledIcon />
-                    Styled-Components <SkillIcon /> <SkillIcon />
+                    <ExpressIcon />
+                    Express
+                </div>
+                <div>
+                    <ReactIcon />
+                    React
                 </div>
                 <div>
                     <NodeIcon />
-                    Node.js <SkillIcon /> <SkillIcon />
+                    Node.js
                 </div>
                 <div>
-                    <MongoIcon />
-                    MongoDB <SkillIcon /> <SkillIcon />
+                    <StyledIcon />
+                    Styled-Components
+                </div>
+                </SkillsCard>
+
+                <SkillsCard>
+                <h1><em>Secondary</em></h1>
+                <div>
+                    <MysqlIcon />
+                    MySQL
                 </div>
                 <div>
-                    <FigmaIcon />
-                    Figma <SkillIcon />
+                    <NextIcon />
+                    Next
                 </div>
                 <div>
                     <HandlebarsIcon />
-                    Handlebars.js <SkillIcon /> <SkillIcon />
-                </div>
-                <div>
-                    <HtmlIcon />
-                    HTML <SkillIcon /> <SkillIcon /> <SkillIcon />
-                </div>
-                <div>
-                    <CssIcon />
-                    CSS <SkillIcon /> <SkillIcon />
+                    Handlebars 
                 </div>
                 <div>
                     <BootstrapIcon />
-                    Bootstrap <SkillIcon /> <SkillIcon />
+                    Bootstrap
                 </div>
                 <div>
-                    <AbletonIcon />
-                    Ableton Live <SkillIcon /> <SkillIcon /> <SkillIcon />
+                    <BulmaIcon />
+                    Bulma 
                 </div>
                 <div>
-                    <MacOsIcon />
-                    mac OS <SkillIcon /> <SkillIcon /> <SkillIcon />
-                </div>
-                <div>
-                    <DrumIcon />
-                    Drumset <SkillIcon /> <SkillIcon /> 
-                </div>
-                <div>
-                    <GuitarIcon />
-                    Guitar <SkillIcon /> <SkillIcon /> 
+                    <FigmaIcon />
+                    Figma 
                 </div>
             </SkillsCard>
-
-            <SkillsLegend>
-                <div>
-                    Learning <SkillIcon />
-                </div>
-                <div>
-                    Working <SkillIcon /> <SkillIcon />
-                </div>
-                <div>
-                    Pro <SkillIcon /> <SkillIcon /> <SkillIcon />
-                </div>
-            </SkillsLegend>
-            <br />
-            <br />
 
             <SkillsCard>
                 <>
@@ -120,6 +96,10 @@ export default function Skills() {
                     Team-player
                 </div>
                 <div>
+                    <FeedbackIcon />
+                    Thrives on Feedback
+                </div>
+                <div>
                     <DetailIcon />
                     Detail-oriented-perfectionist
                 </div>
@@ -135,11 +115,6 @@ export default function Skills() {
                     <MusicIcon />
                     Music Lover
                 </div>
-                <div>
-                    <FeedbackIcon />
-                    Thrives on Feedback
-                </div>
-                
             </SkillsCard>
 
         </SkillsContainer>

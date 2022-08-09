@@ -42,7 +42,7 @@ export const AboutImage = styled.img`
     
     margin: 0 auto;
 
-    /* &:hover { 
+    &:hover { 
     animation: pulse 1s 1;
     animation-timing-function: linear;
     }
@@ -63,7 +63,7 @@ export const AboutImage = styled.img`
         100% { 
             transform: scale(1) rotate(0deg);
         }
-    } */
+    }
 
     @media only screen and (min-width: 415px) {
         width: 50%; 
@@ -73,9 +73,6 @@ export const AboutImage = styled.img`
         width: 100%; 
         object-fit: contain;       
     }
-`
-export const BandcampLink = styled.div`
-    
 `
 
 
@@ -95,7 +92,6 @@ export const ResumeButton = styled.a`
     border-radius: 5px;
     background-color: ${({ theme }) => theme.fontGreen};
     color: ${({ theme }) => theme.backgroundColor };
-    margin-bottom: 2em;
 
     &:hover {
         background-color: ${({ theme }) => theme.borderHighlight};

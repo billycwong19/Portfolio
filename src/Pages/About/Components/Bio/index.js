@@ -29,11 +29,10 @@ export default function Bio(){
                         <CertificateIcon />
                             <p>University of Texas at Austin Full-Stack Coding Bootcamp</p>
                         <InternetIcon />
-                            <p>Internet University</p>
+                            <p>Internet</p>
                     </CodingEducationContainer>
-
-                    <p>For a list of certifications please visit my <a href='https://www.linkedin.com/in/williamcwong19/details/certifications/' target='_blank' rel='noreferrer'>LinkedIn</a>.</p>
                 </InfoBoxes>
+            <p>For a list of certifications please visit my <a href='https://www.linkedin.com/in/williamcwong19/details/certifications/' target='_blank' rel='noreferrer'>LinkedIn</a>.</p>
             <p>Please check out my <a href='https://github.com/billycwong19' target='_blank' rel='noreferrer'>Github</a> profile or the <a href='#projects'>Projects</a> section of my portfolio to see what I've been up to.</p>
             </HiddenBio>
         </BioContainer>

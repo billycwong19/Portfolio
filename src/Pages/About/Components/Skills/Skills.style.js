@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { ReactLogo, Html5, Nodejs, Figma, Css3, Bootstrap } from '@styled-icons/boxicons-logos'
-import { Styledcomponents, Mongodb, Handlebarsdotjs, Abletonlive, Macos } from '@styled-icons/simple-icons'
-import { CommentDots, UserFriends, Drum } from '@styled-icons/fa-solid'
+import { ReactLogo, Nodejs, Figma, Bootstrap } from '@styled-icons/boxicons-logos'
+import { Styledcomponents, Mongodb, Handlebarsdotjs, Express, Bulma, Nextdotjs, Mysql } from '@styled-icons/simple-icons'
+import { CommentDots, UserFriends } from '@styled-icons/fa-solid'
 import { Details } from '@styled-icons/material-sharp/Details'
 import { AllInclusive } from '@styled-icons/material/AllInclusive'
 import { Heart, MusicPlayerFill } from '@styled-icons/bootstrap'
 import { Plant } from '@styled-icons/remix-fill/Plant'
-import { PersonFeedback, Guitar } from '@styled-icons/fluentui-system-filled'
+import { PersonFeedback } from '@styled-icons/fluentui-system-filled'
 import { CodeWorking } from '@styled-icons/ionicons-outline/CodeWorking'
 
 
@@ -14,7 +14,6 @@ export const SkillsContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     h2 {
         width: 100%;
@@ -64,7 +63,7 @@ export const SkillsCard = styled.div`
     width: 100%;
 
     @media only screen and (min-width: 666px) {
-        width: 50%;     
+        width: 33%;     
     }
 
 
@@ -92,17 +91,13 @@ export const ReactIcon = styled(ReactLogo)`
     margin-right: .5em;
 `
 
-export const HtmlIcon = styled(Html5)`
-    height: 32px;
-    margin-right: .5em;
-`
-export const CssIcon = styled(Css3)`
-    height: 32px;
-    margin-right: .5em;
-`
-
 export const NodeIcon = styled(Nodejs)`
     height: 32px;
+    margin-right: .5em;
+`
+export const ExpressIcon = styled(Express)`
+    height: 32px;
+    color: ${({ theme }) => theme.fontColor};
     margin-right: .5em;
 `
 
@@ -128,26 +123,17 @@ export const BootstrapIcon = styled(Bootstrap)`
     color: ${({ theme }) => theme.fontColor};
     margin-right: .5em;
 `
-
-export const AbletonIcon = styled(Abletonlive)`
+export const BulmaIcon = styled(Bulma)`
     height: 32px;
     color: ${({ theme }) => theme.fontColor};
     margin-right: .5em;
 `
-
-export const GuitarIcon = styled(Guitar)`
+export const NextIcon = styled(Nextdotjs)`
     height: 32px;
     color: ${({ theme }) => theme.fontColor};
     margin-right: .5em;
 `
-
-export const DrumIcon = styled(Drum)`
-    height: 32px;
-    color: ${({ theme }) => theme.fontColor};
-    margin-right: .5em;
-`
-
-export const MacOsIcon = styled(Macos)`
+export const MysqlIcon = styled(Mysql)`
     height: 32px;
     color: ${({ theme }) => theme.fontColor};
     margin-right: .5em;
