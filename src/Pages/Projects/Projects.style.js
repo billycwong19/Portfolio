@@ -20,7 +20,6 @@ export const ProjectsBanner = styled.img`
 export const ProjectsContainer = styled.div`
     margin-top: 2em;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
