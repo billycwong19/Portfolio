@@ -7,6 +7,7 @@ export const ProjectsBody = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 5em;
+    justify-content: center;
     
 `
 
@@ -14,7 +15,6 @@ export const ProjectsBanner = styled.img`
     max-height: 150px;
     max-width: 100%;
     opacity: 0.9;
-   
 `
 
 export const ProjectsContainer = styled.div`

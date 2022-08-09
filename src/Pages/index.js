@@ -9,7 +9,7 @@ export default function Home({ props }) {
     return (
         <>
         <Hero props={props} />
-        <About />
+        <About props={props} />
         <Projects />
         <Contact />
         </>

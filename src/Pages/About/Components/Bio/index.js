@@ -6,7 +6,7 @@ export default function Bio(){
     const displayMoreInfo = () => setMoreInfoState(!moreInfoState)
     return (
         <BioContainer>
-            <h2>I am a junior full-stack developer with a curiosity towards pixel perfection and crafting satisfying UI/UX interfaces.</h2> 
+            <h2>I am a junior MERN full-stack developer with a curiosity towards pixel perfection.</h2> 
                 { moreInfoState === false ? 
                 <MoreInfo onClick={() => displayMoreInfo()}>
                     more info 
@@ -20,20 +20,21 @@ export default function Bio(){
             <HiddenBio moreInfoState={moreInfoState}>
                 <InfoBoxes>
                     <EducationContainer>
-                        <h3><em>Education</em></h3>
+                        <h2><em>Education</em></h2>
                         <RibbonIcon />
                             <p>Berklee College of Music</p>
                     </EducationContainer>
                     <CodingEducationContainer>
-                        <h3><em>Coding Education</em></h3>
+                        <h2><em>Coding Education</em></h2>
                         <CertificateIcon />
-                            <p>UT Coding Bootcamp</p>
+                            <p>University of Texas at Austin Full-Stack Coding Bootcamp</p>
                         <InternetIcon />
                             <p>Internet University</p>
                     </CodingEducationContainer>
+
+                    <p>For a list of certifications please visit my <a href='https://www.linkedin.com/in/williamcwong19/details/certifications/' target='_blank' rel='noreferrer'>LinkedIn</a>.</p>
                 </InfoBoxes>
-            <p>Currently, I am creating a React component library that contains highly reusable UI components such as a contact form, navbar, or calendar. The code base for the components are simple and I intend to expand on the features and accumulate a UI library for myself and the internet at large to use. </p>
-            <p>It goes without saying that I couldn't be where I am without the support of my loving partner, Sasha. Her love keeps me on my toes and without her I wouldn't have been able to pursue and continue my studies in web development. Our two little furry boys make sure I understand unconditional love and patience and I'd do anything to keep them happy and healthy. </p>
+            <p>Please check out my <a href='https://github.com/billycwong19' target='_blank' rel='noreferrer'>Github</a> profile or the <a href='#projects'>Projects</a> section of my portfolio to see what I've been up to.</p>
             </HiddenBio>
         </BioContainer>
     )

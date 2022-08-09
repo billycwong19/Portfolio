@@ -23,11 +23,24 @@ export const HiddenBio = styled.div`
     display: ${({ moreInfoState }) => moreInfoState ? 'block' : 'none'};
     transition: 2s ease-in-out;
     opacity: ${({ moreInfoState }) => moreInfoState ? '1' : '0'};
+
+    a {
+        color: ${({ theme }) => theme.fontColor};
+        text-decoration: none;
+        font-weight: 500;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 `
 export const InfoBoxes = styled.div`
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    @media only screen and (min-width: 666px) {
+        flex-direction: row;
+    }
 `
 export const EducationContainer = styled.div`
     padding: 0 .5em;

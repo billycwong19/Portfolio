@@ -11,6 +11,8 @@ import {
     
 import Skills from "./Components/Skills";
 import Bio from './Components/Bio'
+import {FooterIcons} from '../../GlobalComponents/Footer/Footer.style'
+import { GithubIcon } from "../../GlobalComponents/Navbar/Navbar.style";
 
 const styles = {
     border: 0,
@@ -19,7 +21,7 @@ const styles = {
     marginTop: '2em'
 }
 
-export default function About() {
+export default function About({ props }) {
     return (
         <>
         
@@ -27,6 +29,29 @@ export default function About() {
             <ResumeButton href="./images/resume.pdf" target="_blank" rel="noreferrer">
                 <PaperClipIcon /> CV
             </ResumeButton>
+            <FooterIcons>
+
+            { props.themeState === 'light' ?
+                <div>
+                    <a href="https://github.com/billycwong19" target="_blank" rel="noopener noreferrer">
+                    <GithubIcon src='./images/greengithub.png' alt="green github icon" />
+                    </a>
+                    <a href='mailto:billycwong19@gmail.com' target="_blank" rel="noopener noreferrer">
+                    <img src='./images/gmailgreen.png' alt="gmail icon" />
+                    </a>
+                </div>
+                    :
+                <div>
+                    <a href="https://github.com/billycwong19" target="_blank" rel="noopener noreferrer">
+                    <GithubIcon src='./images/whitegithub.png' alt="green github icon" />
+                    </a>
+                    <a href='mailto:billycwong19@gmail.com' target="_blank" rel="noopener noreferrer">
+                    <img src='./images/whitegmail.png' alt="gmail icon" />
+                    </a>
+                </div>
+            }
+
+            </FooterIcons>
 
             <AboutBanner src='./images/aboutbanner.png' alt="about banner" />
         
@@ -34,14 +59,6 @@ export default function About() {
                 <ImageCard>
                     <div>Hey, I'm William!</div>
                     <AboutImage src="./images/squareselfie.png" alt='avatar' />
-                </ImageCard>
-                <ImageCard>
-                    <div>This is my brilliant partner, Sasha.</div>
-                    <AboutImage src="./images/sasha.png" alt='avatar' />
-                </ImageCard>
-                <ImageCard>
-                    <div>And, our two beautiful boys!</div>
-                    <AboutImage src="./images/casperandtofu.png" alt='avatar' />
                 </ImageCard>
             </ImageContainer>
 
