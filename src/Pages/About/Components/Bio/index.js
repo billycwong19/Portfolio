@@ -28,8 +28,6 @@ export default function Bio(){
                         <h2><em>Coding Education</em></h2>
                         <CertificateIcon />
                             <p>University of Texas at Austin Full-Stack Coding Bootcamp</p>
-                        <InternetIcon />
-                            <p>Internet</p>
                     </CodingEducationContainer>
                 </InfoBoxes>
             <p>For a list of certifications please visit my <a href='https://www.linkedin.com/in/williamcwong19/details/certifications/' target='_blank' rel='noreferrer'>LinkedIn</a>.</p>
