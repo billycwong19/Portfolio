@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BioContainer, HiddenBio, MoreInfo, InfoBoxes, EducationContainer, CertificateIcon, RibbonIcon, InternetIcon, CodingEducationContainer} from './Bio.style'
+import { BioContainer, HiddenBio, MoreInfo, InfoBoxes, EducationContainer, CertificateIcon, RibbonIcon, CodingEducationContainer} from './Bio.style'
 
 export default function Bio(){
     const [moreInfoState, setMoreInfoState] = useState(false)
